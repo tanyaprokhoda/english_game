@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import english_game from './english_game.png';
+import english_game from './images/english_game.png';
 class App extends Component {
 render () {
   return <div>
-    <img 
+    <img
         src={english_game} className="english_game"
-    
+
       />
       data = [{img: 'apple.png', words:['red', 'bad', 'apple'] } ]
  <button type="button" class="btn margin btn-danger">ГЛАВНАЯ СТРАНИЦА</button>

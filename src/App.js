@@ -1,71 +1,93 @@
 import React, { Component } from 'react';
 import './App.css';
+import Item from "./components/Item";
+var Store = require('./stores/Store');
 const data = [
       {
-        img: 'pic/apple.png',
+        img: 'images/apple.png',
         words:['chicken', 'water', 'apple', 'cheese', 'eggs', 'milk', 'tea'],
-      correct: 2
-      },
-    {
-      img: 'pic/cheese.png',
-      words:['water', 'cheese', 'apple', 'carrot', 'cucumber', 'potato', 'rice'],
-      correct: 1
+        correct: 2
       },
       {
-        img: 'pic/pineapple.png',
+        img: 'images/cheese.png',
+        words:['water', 'cheese', 'apple', 'carrot', 'cucumber', 'potato', 'rice'],
+        correct: 1
+      },
+      {
+        img: 'images/pineapple.png',
         words:['banana', 'blackberry', 'blueberry', 'cherry', 'lemon', 'orange', 'pineapple'],
-      correct: 6
+        correct: 6
       },
       {
-        img: 'pic/bread.png',
+        img: 'images/bread.png',
         words:['bread', 'cabbage', 'candy', 'fish', 'lemon', 'orange', 'meat'],
-      correct: 0
-      },
-    {
-      img: 'pic/orange.png',
-      words:['banana', 'blackberry', 'mushroom', 'cherry', 'lemon', 'orange', 'pineapple'],
-      correct: 5
+        correct: 0
       },
       {
-        img: 'pic/banana.png',
+        img: 'images/orange.png',
+        words:['banana', 'blackberry', 'mushroom', 'cherry', 'lemon', 'orange', 'pineapple'],
+        correct: 5
+      },
+      {
+        img: 'images/banana.png',
         words:['banana', 'melon', 'blueberry', 'mushroom', 'lemon', 'orange', 'pineapple'],
-      correct: 0
-      },
-    {
-      img: 'pic/potato.png',
-      words:['banana', 'nut', 'peach', 'pepper', 'lemon', 'potato', 'pineapple'],
-      correct: 5
-      },
-    {
-      img: 'pic/lemon.png',
-      words:['chocolate', 'apricot', 'tea', 'cherry', 'lemon', 'orange', 'pineapple'],
-      correct: 4
+        correct: 0
       },
       {
-        img: 'pic/tomato.png',
+        img: 'images/potato.png',
+        words:['banana', 'nut', 'peach', 'pepper', 'lemon', 'potato', 'pineapple'],
+        correct: 5
+      },
+      {
+        img: 'images/lemon.png',
+        words:['chocolate', 'apricot', 'tea', 'cherry', 'lemon', 'orange', 'pineapple'],
+        correct: 4
+      },
+      {
+        img: 'images/tomato.png',
         words:['banana', 'tomato', 'blueberry', 'cherry', 'lemon', 'orange', 'pineapple'],
       correct: 1
       },
-    {
-      img: 'pic/pear.png',
-      words:['banana', 'blackberry', 'blueberry', 'pear', 'lemon', 'orange', 'pineapple'],
-      correct: 3
+      {
+        img: 'images/pear.png',
+        words:['banana', 'blackberry', 'blueberry', 'pear', 'lemon', 'orange', 'pineapple'],
+        correct: 3
       },
       {
-        img: 'pic/meat.png',
+        img: 'images/meat.png',
         words:['banana', 'blackberry', 'meat', 'cherry', 'lemon', 'orange', 'pineapple'],
-      correct: 2
+        correct: 2
       },
       {
-        img: 'pic/mushroom.png',
+        img: 'images/mushroom.png',
         words:['banana', 'mushroom', 'blueberry', 'cherry', 'plum', 'pie', 'pineapple'],
-      correct: 1
+        correct: 1
       },
- ]
- export default class Game extends Component {
-render () {
-  return (
-     data.map((obj) => <img className="pic" src={obj.img}/>)
-  )
+ ];
+export default class Game extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            value: 0
+        }
+    }
+    componentDidMount() {
+        Store.bind(this, 'incremented');
+    }
+    componentWillUnmount() {
+        Store.unbind(this, 'incremented');
+    }
+    incremented() {
+        this.setState({
+            value: Store.getValue()
+        })
+    }
+
+    render () {
+        var value = this.state.value ? this.state.value : 0;
+        return <div>
+                    <Item item={data[value]}/>
+                    <img src={data[value].img} width={'200px'} />
+               </div>
     }
  }
