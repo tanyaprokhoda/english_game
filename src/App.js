@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Item from "./components/Item";
-var Store = require('./stores/Store');
+import Store from './stores/Store';
 const data = [
       {
         img: 'images/apple.png',

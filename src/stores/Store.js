@@ -2,6 +2,7 @@ var Dispatcher = require('./../Dispatcher');
 
 var Store = {
     value: 0,
+    page: 'home',
 
     listeners: [], // list of listening objects
     callbacks: [], // list of methods that should be called on those objects (as strings)
@@ -10,8 +11,16 @@ var Store = {
         this.value++;
     },
 
+    setPage: function (route) {
+        this.page = route;
+    },
+
     getValue: function () {
         return this.value;
+    },
+
+    getPage: function () {
+        return this.page;
     },
 
     bind: function (listener, callback) {
@@ -43,6 +52,10 @@ Dispatcher.register(function (payload) {
     switch (payload.eventName) {
         case 'increment':
             Store.incrementValue();
+            Store.trigger();
+            break;
+        case 'updatePage':
+            Store.setPage(payload.route);
             Store.trigger();
             break;
     }
