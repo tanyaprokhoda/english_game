@@ -1,3 +1,4 @@
+import './../App.css';
 var React = require('react');
 var Dispatcher = require('./../Dispatcher');
 var Store = require('./../stores/Store');
@@ -34,8 +35,8 @@ export default class Item extends React.Component {
 
     render() {
         const words = this.props.item.words || [];
-        return <div className='options'>
-            {words.map((value, index) => <button key={index} onClick={() => this.handleClick(index)}>{value}</button>)}
+        return <div className='rectangle'>
+            {words.map((value, index) => <button className="button_style" key={index} onClick={() => this.handleClick(index)}>{value}</button>)}
         </div>;
 
     }

@@ -88,6 +88,7 @@ export default class Game extends React.Component {
             return <div>
                 <Item item={data[this.state.value]}/>
                 <img src={data[this.state.value].img} width={'200px'} />
+                
             </div>
         }else {
             return <h1>The end!</h1>

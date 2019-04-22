@@ -41,3 +41,28 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.rectangle {
+  position: absolute;
+  margin-top: 20px;
+	width: 850px;
+	height: 470px;
+  background: white; 
+  border-radius: 25px;
+  opacity: 0.7;
+  left: 23%;
+  top: 26%;  
+}
+
+.button_style {
+
+  width: 100px;
+	height: 100px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+  background: yellowgreen;
+  font-family: fantasy;
+  
+  
+}
