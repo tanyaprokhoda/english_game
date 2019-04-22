@@ -7,12 +7,13 @@ body {
   background-repeat: no-repeat;
   display: block;
   margin: 0 auto;
-  width: 650px;
+  width: 350px;
 }
 
-.margin {
-  margin-left: 450px;
-  margin-top: 30px;
+.margin_menu_buttons {
+  display: flex;
+  justify-content: center;
+  margin: 0 -5px;
 }
 
 .margin2 {
@@ -20,6 +21,23 @@ body {
   margin-top: 30px;
 }
 
+.item {
+
+  margin: 0 5px;
+  margin-top: 10px;
+
+}
 .pic {
   height: 200px;
+}
+
+.bird_hello {
+  height: 430px;
+  margin-top: 30px;
+  
+}
+
+.margin_bird {
+  display: flex;
+  justify-content: center;
 }

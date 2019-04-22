@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import english_game from './images/english_game.png';
+import bird_hello from './images/bird_hello.png';
 import App from "./App";
 import Store from './stores/Store';
 var Dispatcher = require('./Dispatcher');
@@ -51,7 +52,7 @@ export default class StartPage extends React.Component  {
     getContent (currentPage) {
         let page = '';
         switch (currentPage) {
-            case "home": page = <div/>; break;
+            case "home": page = <div className="margin_bird"><img src={bird_hello} className="bird_hello"></img></div>; break;
             case "game": page = <App/>; break;
             case "profile": page = <div>This is profile</div>; break;
         }
@@ -60,11 +61,13 @@ export default class StartPage extends React.Component  {
     render () {
             return <div>
                 <img src={english_game} className="english_game" />
-                {pages.map((item, index) => <button
-                    key={index}
-                    type="button"
-                    onClick={() => this.handleChangePage(item.route)}
-                    className="btn margin btn-danger">{item.name}</button>)}
+                <div className="margin_menu_buttons">
+                    {pages.map((item, index) => <button
+                        key={index}
+                        type="button"
+                        onClick={() => this.handleChangePage(item.route)}
+                        className="btn item btn-danger">{item.name}</button>)}
+                </div>
                 <div className='content'>
                     {this.getContent(this.state.page)}
                 </div>

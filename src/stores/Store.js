@@ -32,7 +32,7 @@ var Store = {
         var indexListener = this.listeners.indexOf(listener);
         var indexCallback = this.callbacks.indexOf(callback);
         // check if listener and callback exists
-        if (indexListener == indexCallback && indexListener > -1) {
+        if (indexListener === indexCallback && indexListener > -1) {
             // remove if exists
             this.listeners.splice(indexListener, 1);
             this.callbacks.splice(indexCallback, 1);
