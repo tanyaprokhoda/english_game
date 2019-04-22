@@ -56,13 +56,14 @@ body {
 
 .button_style {
 
-  width: 100px;
-	height: 100px;
+  width: 150px;
+	height: 110px;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	border-radius: 56px;
   background: yellowgreen;
   font-family: fantasy;
-  
-  
+  color: black;
+  font-size: 30px;
+
 }
