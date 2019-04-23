@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import english_game from './images/english_game.png';
 import bird_hello from './images/bird_hello.png';
-import App from "./App";
+import Game from "./Game";
 import Store from './stores/Store';
+import Teach from "./Teach";
+import Category from "./Category";
 var Dispatcher = require('./Dispatcher');
 const pages = [
     {
@@ -11,8 +13,12 @@ const pages = [
         route: 'home'
     },
     {
-        name: 'ИГРА',
-        route: 'game'
+        name: 'ОБУЧЕНИЕ',
+        route: 'teach'
+    },
+    {
+        name: 'КАТЕГОРИИ',
+        route: 'category'
     },
     {
         name: 'ЛИЧНАЯ КОМНАТА',
@@ -53,7 +59,9 @@ export default class StartPage extends React.Component  {
         let page = '';
         switch (currentPage) {
             case "home": page = <div className="margin_bird"><img src={bird_hello} className="bird_hello"></img></div>; break;
-            case "game": page = <App/>; break;
+            case "game": page = <Game/>; break;
+            case "teach": page = <Teach/>; break;
+            case "category": page = <Category/>; break;
             case "profile": page = <div>This is profile</div>; break;
         }
         return page;
