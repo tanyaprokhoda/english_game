@@ -31,11 +31,10 @@ export default class Category extends React.Component {
 
     render () {
         return <div>
-                    <button type="button" onClick={() => this.handleChangePage('game')} className="btn item btn-danger">{'Food game'}</button>
-                    <button type="button" onClick={() => this.handleChangePage('game')} className="btn item btn-danger">{'Food game'}</button>
-                    <button type="button" onClick={() => this.handleChangePage('game')} className="btn item btn-danger">{'Food game'}</button>
-                    <button type="button" onClick={() => this.handleChangePage('game')} className="btn item btn-danger">{'Food game'}</button>
-                    <button type="button" onClick={() => this.handleChangePage('game')} className="btn item btn-danger">{'Food game'}</button>
+                    <button type="button" onClick={() => this.handleChangePage('game')} className="btn item button_pic">{'Food game'}</button>
+                    <button type="button" onClick={() => this.handleChangePage('game')} className="btn item button_pic_white">{'Раздел'}</button>
+                    <button type="button" onClick={() => this.handleChangePage('game')} className="btn item button_pic_white">{'Раздел'}</button>
+                    <button type="button" onClick={() => this.handleChangePage('game')} className="btn item button_pic_white">{'Раздел'}</button>
                 </div>
     }
  }

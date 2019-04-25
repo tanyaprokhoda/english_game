@@ -5,63 +5,85 @@ const data = [
         words:['chicken', 'water', 'apple', 'cheese', 'eggs', 'milk', 'tea'],
         correct: 2,
         translate: 'Яблоко',
-        transcription: 'yabloko'
+        transcription: '[ ˈæp.l̩ ]'
     },
     {
         img: 'images/cheese.png',
         words:['water', 'cheese', 'apple', 'carrot', 'cucumber', 'potato', 'rice'],
-        correct: 1
+        correct: 1,
+        translate: 'Сыр',
+        transcription: '[ tʃiːz ]'
     },
     {
         img: 'images/pineapple.png',
         words:['banana', 'blackberry', 'blueberry', 'cherry', 'lemon', 'orange', 'pineapple'],
-        correct: 6
+        correct: 6,
+        translate: 'Ананас',
+        transcription: '[ ˈpaɪnˌæp.l̩ ]'
     },
     {
         img: 'images/bread.png',
         words:['bread', 'cabbage', 'candy', 'fish', 'lemon', 'orange', 'meat'],
-        correct: 0
+        correct: 0,
+        translate: 'Хлеб',
+        transcription: '[ bred ]'
     },
     {
         img: 'images/orange.png',
         words:['banana', 'blackberry', 'mushroom', 'cherry', 'lemon', 'orange', 'pineapple'],
-        correct: 5
+        correct: 5,
+        translate: 'Апельсин',
+        transcription: '[ ˈɒrɪndʒ ]'
     },
     {
         img: 'images/banana.png',
         words:['banana', 'melon', 'blueberry', 'mushroom', 'lemon', 'orange', 'pineapple'],
-        correct: 0
+        correct: 0,
+        translate: 'Банан',
+        transcription: '[ bəˈnɑː.nə ]'
     },
     {
         img: 'images/potato.png',
         words:['banana', 'nut', 'peach', 'pepper', 'lemon', 'potato', 'pineapple'],
-        correct: 5
+        correct: 5,
+        translate: 'Картошка',
+        transcription: '[ pəˈteɪtəʊ ]'
     },
     {
         img: 'images/lemon.png',
         words:['chocolate', 'apricot', 'tea', 'cherry', 'lemon', 'orange', 'pineapple'],
-        correct: 4
+        correct: 4,
+        translate: 'Лемон',
+        transcription: '[ ˈlemən ]'
     },
     {
         img: 'images/tomato.png',
         words:['banana', 'tomato', 'blueberry', 'cherry', 'lemon', 'orange', 'pineapple'],
-        correct: 1
+        correct: 1,
+        translate: 'Помидор',
+        transcription: '[ təˈmɑːtəʊ ]'
     },
     {
         img: 'images/pear.png',
         words:['banana', 'blackberry', 'blueberry', 'pear', 'lemon', 'orange', 'pineapple'],
-        correct: 3
+        correct: 3,
+        translate: 'Груша',
+        transcription: '[ peər ]'
     },
     {
         img: 'images/meat.png',
         words:['banana', 'blackberry', 'meat', 'cherry', 'lemon', 'orange', 'pineapple'],
-        correct: 2
+        correct: 2,
+        translate: 'Мясо',
+        transcription: '[ miːt ]'
     },
     {
         img: 'images/mushroom.png',
         words:['banana', 'mushroom', 'blueberry', 'cherry', 'plum', 'pie', 'pineapple'],
         correct: 1,
-        translate: ''
+        translate: 'Гриб',
+        transcription: '[ ˈmʌʃ.ruːm ]'
+
     },
 ];
 
