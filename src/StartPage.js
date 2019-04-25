@@ -6,6 +6,7 @@ import Game from "./Game";
 import Store from './stores/Store';
 import Teach from "./Teach";
 import Category from "./Category";
+import Frases from "../src/components/frases/components/App/Frases"
 var Dispatcher = require('./Dispatcher');
 const pages = [
     {
@@ -63,6 +64,7 @@ export default class StartPage extends React.Component  {
             case "teach": page = <Teach/>; break;
             case "category": page = <Category/>; break;
             case "profile": page = <div>This is profile</div>; break;
+            case "frases" : page = <Frases />; break;
         }
         return page;
     }
