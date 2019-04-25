@@ -36,7 +36,7 @@ export default class Teach extends React.Component {
                         <button className="button_style" onClick={() => this.handleClick()}>{item.words[item.correct]}</button>
                         <h3>{item.translate}</h3>
                         <h3>{item.transcription}</h3>
-                        <img src={this.state.data[this.state.teach_value].img} width={'200px'} />
+                        <img src={this.state.data[this.state.teach_value].img} className="pic_style" />
                     </div>
          }else {
              return <h1>The end!</h1>

@@ -27,8 +27,8 @@ export default class Game extends React.Component {
         if(this.state.value < this.state.data.length){
             return <div>
                 <Item item={this.state.data[this.state.value]}/>
-                <img src={this.state.data[this.state.value].img} width={'200px'} />
-                Score: {this.state.value * 3}
+                <img src={this.state.data[this.state.value].img} className="eat_pic_game" />
+               <p className="score"> Score: {this.state.value * 3} </p>
             </div>
         }else {
             return <h1>The end! Your score: {this.state.value * 3} From: {this.state.value * 3}</h1>

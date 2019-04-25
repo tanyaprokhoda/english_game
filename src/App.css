@@ -83,3 +83,17 @@ font-family: fantasy;
 .rectangle {
   margin-bottom: 20px;
 }
+
+.pic_style {
+  height: 200px;
+}
+
+.eat_pic_game {
+  width: 200px;
+}
+
+.score {
+  font-family: fantasy;
+  color: black;
+  font-size: 28px;
+}
